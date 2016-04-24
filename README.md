@@ -1,7 +1,5 @@
 # My Mini Triage.
 
-My mini triage. 
-
 ## Overview
 
 This web app would help ease the stress on the A&E system of the NHS because as much as 30-35% of patients who go to A&E need not to be there, redirecting them to there local urgent care centres or GPs would help the NHS save resources such as time, money and manpower.
@@ -28,7 +26,7 @@ Over the 12 weeks of the front end Engineering course, various technologies were
 
 1. EPIC - As a user, I want the website to tell me if I need to go to A&E or to another treatment facility so that I don't flood the A&E and waste resources.
 
-2.EPIC - As a user, I want the website to to help me iterate my symptoms I am experiencing so that I can find out whether I need to go to A&E, urgent Care centres, walk-in centres or GPs.
+2. EPIC - As a user, I want the website to to help me iterate my symptoms I am experiencing so that I can find out whether I need to go to A&E, urgent Care centres, walk-in centres or GPs.
 
 3. MUST HAVES - As a user, i want the website to have a form that let me list all my symptoms so that I can find out whether I need to go to A&E, an urgent care centre or my GP. 
 
