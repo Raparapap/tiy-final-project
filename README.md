@@ -30,9 +30,9 @@ Over the 12 weeks of the front end Engineering course, various technologies were
 
 2.EPIC - As a user, I want the website to to help me iterate my symptoms I am experiencing so that I can find out whether I need to go to A&E, urgent Care centres, walk-in centres or GPs.
 
-3. MUST HAVES - As a user, i want the website to have a form that let me list all my symptoms so that I can find out whether I need to go to A&E, an urgent care centre or my GP
+3. MUST HAVES - As a user, i want the website to have a form that let me list all my symptoms so that I can find out whether I need to go to A&E, an urgent care centre or my GP. 
 
-4. MUST HAVES - As a user, I want the website to find me my nearest treatment facility based on my area/postcode/GPS so that it is easier for me to get to my nearest facility with details tel and emails
+4. MUST HAVES - As a user, I want the website to find me my nearest treatment facility based on my area/postcode/GPS so that it is easier for me to get to my nearest facility with details tel and emails.
 
 5. MUST HAVES - As a user, I want the website to save my information so that the website can pick the most efficient facility to go to based on my information (location and GP address) given.
 
