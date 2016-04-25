@@ -60,3 +60,9 @@ Over the 12 weeks of the front end Engineering course, various technologies were
 
 ### Currently on Week 1
 
+1. planning of the first sprint
+	* prioritising tasks according to category (frontend, backend, APIs, etc)
+	* creating milestones for the project
+2. Setting up Gulp, gulptasks, creating a package.json file and a project folder structure.
+3. 
+
