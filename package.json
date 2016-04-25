@@ -1,0 +1,19 @@
+{
+  "name": "tiy-final-project",
+  "version": "1.0.0",
+  "description": "Final project for Front end Engineering Course ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raparapap/tiy-final-project.git"
+  },
+  "author": "Raphael Desoyo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raparapap/tiy-final-project/issues"
+  },
+  "homepage": "https://github.com/Raparapap/tiy-final-project#readme"
+}
