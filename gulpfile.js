@@ -31,6 +31,3 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['JSXtoJS', 'SCSStoCSS', 'minifyHtml', 'watch']);
-
-
-
