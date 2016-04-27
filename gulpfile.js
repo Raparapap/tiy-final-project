@@ -7,8 +7,10 @@ var htmlmin = require('gulp-htmlmin');
 
 gulp.task('JSXtoJS', function () {
 	return browserify('./source/js/app.jsx')
+		 gulp.src('./source/js/app.jsx')
 		.transform('babelify', {presets: ['es2015', 'react']})
 		.bundle()
+		.pipe(gulpUglify())
 		.pipe(fs.createWriteStream('./build/js/app.js'));
 });
 
