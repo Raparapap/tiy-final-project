@@ -26,8 +26,18 @@ var RegistrationForm = React.createClass({
 				<div> <input type="text" placeholder="location" data-js-react-locationInputRegister /> </div>
 				<div> <input type="text" placeholder="email" data-js-react-emailInputRegister /> </div>
 				<div> <input type="text" placeholder="GP address" data-js-react-gpAddressInputRegister /> </div>
-
+				<div> <input type="text" placeholder="Are you a resident of the UK?" data-js-react-ukResidentInput /> </div>
 			</form>
+			</div>
+		);
+	}
+});
+
+var SubmitAndLogInButton = React.createClass({
+	render: function () {
+		return (
+			<div>
+			<button type="submit" data-js-react-submitAndLogInInput> Sign In </button> 
 			</div>
 		);
 	}
@@ -66,7 +76,8 @@ var ModalRegister = React.createClass({
           style={customStyles} >
           
           <RegistrationForm />
-          <button onClick={this.closeModal}>Use as Guest</button>
+          <SubmitAndLogInButton />
+          <button onClick={this.closeModal}>Close window</button>
         </Modal>
       </div>
     );

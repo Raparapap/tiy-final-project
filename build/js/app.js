@@ -21235,10 +21235,11 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var MainApplication = require('./components/MainApplication.jsx');
 var ModalRegister = require('./components/ModalRegister.jsx');
+var ModalSignIn = require('./components/ModalSignIn.jsx');
 
-ReactDOM.render(React.createElement(ModalRegister, null), document.querySelector('[data-react-application]'));
+ReactDOM.render(React.createElement(MainApplication, null), document.querySelector('[data-react-application]'));
 
-},{"./components/MainApplication.jsx":187,"./components/ModalRegister.jsx":188,"react":185,"react-dom":2}],187:[function(require,module,exports){
+},{"./components/MainApplication.jsx":187,"./components/ModalRegister.jsx":188,"./components/ModalSignIn.jsx":189,"react":185,"react-dom":2}],187:[function(require,module,exports){
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Modal = require('./ModalSignIn.jsx');
@@ -21344,7 +21345,30 @@ var RegistrationForm = React.createClass({
           ' ',
           React.createElement('input', { type: 'text', placeholder: 'GP address', 'data-js-react-gpAddressInputRegister': true }),
           ' '
+        ),
+        React.createElement(
+          'div',
+          null,
+          ' ',
+          React.createElement('input', { type: 'text', placeholder: 'Are you a resident of the UK?', 'data-js-react-ukResidentInput': true }),
+          ' '
         )
+      )
+    );
+  }
+});
+
+var SubmitAndLogInButton = React.createClass({
+  displayName: 'SubmitAndLogInButton',
+
+  render: function () {
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(
+        'button',
+        { type: 'submit', 'data-js-react-submitAndLogInInput': true },
+        ' Sign In '
       )
     );
   }
@@ -21384,10 +21408,11 @@ var ModalRegister = React.createClass({
           shouldCloseOnOverlayClick: false,
           style: customStyles },
         React.createElement(RegistrationForm, null),
+        React.createElement(SubmitAndLogInButton, null),
         React.createElement(
           'button',
           { onClick: this.closeModal },
-          'Use as Guest'
+          'Close window'
         )
       )
     );
@@ -21400,6 +21425,7 @@ module.exports = ModalRegister;
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Modal = require('react-modal');
+var ModalRegister = require('./ModalRegister.jsx');
 
 const customStyles = {
 	content: {
@@ -21437,26 +21463,33 @@ var SigninSignOut = React.createClass({
 	}
 });
 
-var SigninSignOutButtons = React.createClass({
-	displayName: 'SigninSignOutButtons',
+var SigninButton = React.createClass({
+	displayName: 'SigninButton',
 
 	render: function () {
 		return React.createElement(
 			'div',
 			null,
 			React.createElement(
-				'div',
-				null,
-				React.createElement(
-					'button',
-					{ 'data-js-react-signIn': true },
-					' Register '
-				),
-				React.createElement(
-					'button',
-					{ type: 'submit', 'data-js-react-signOut': true },
-					' Sign In '
-				)
+				'button',
+				{ type: 'submit', 'data-js-react-signOut': true },
+				' Sign In '
+			)
+		);
+	}
+});
+
+var RegisterButton = React.createClass({
+	displayName: 'RegisterButton',
+
+	render: function () {
+		return React.createElement(
+			'div',
+			null,
+			React.createElement(
+				'button',
+				{ 'data-js-react-signIn': true, onClick: this.props.onButtonClick },
+				' Register '
 			)
 		);
 	}
@@ -21515,6 +21548,10 @@ var ModalSignIn = React.createClass({
 		this.setState({ modalIsOpen: false });
 	},
 
+	callModalRegister: function () {
+		return React.createElement(ModalRegister, null);
+	},
+
 	render: function () {
 		return React.createElement(
 			'div',
@@ -21531,8 +21568,9 @@ var ModalSignIn = React.createClass({
 					'form',
 					null,
 					React.createElement(SigninSignOut, null),
-					React.createElement(SigninSignOutButtons, null)
+					React.createElement(SigninButton, null)
 				),
+				React.createElement(RegisterButton, { onButtonClick: this.callModalRegister }),
 				React.createElement(FindMyFacilityButton, null),
 				React.createElement(DoAssessmentButton, null),
 				React.createElement(
@@ -21547,4 +21585,4 @@ var ModalSignIn = React.createClass({
 
 module.exports = ModalSignIn;
 
-},{"react":185,"react-dom":2,"react-modal":9}]},{},[186]);
+},{"./ModalRegister.jsx":188,"react":185,"react-dom":2,"react-modal":9}]},{},[186]);

@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Modal = require('react-modal');
+var ModalRegister = require('./ModalRegister.jsx')
 
 const customStyles = {
   content : {
@@ -24,14 +25,21 @@ var SigninSignOut = React.createClass({
 	}
 });
 
-var SigninSignOutButtons = React.createClass({
+var SigninButton = React.createClass({
 	render: function () {
 		return (
 			<div>
-				<div> 
-					<button data-js-react-signIn> Register </button> 
 					<button type="submit" data-js-react-signOut> Sign In </button> 
-				</div>
+			</div>
+		);
+	}
+});
+
+var RegisterButton = React.createClass({
+	render: function () {
+		return (
+			<div>
+					<button data-js-react-signIn onClick={this.props.onButtonClick}> Register </button> 
 			</div>
 		);
 	}
@@ -78,6 +86,11 @@ var ModalSignIn = React.createClass({
     this.setState({modalIsOpen: false});
   },
 
+  callModalRegister: function () {
+  	return <ModalRegister />
+  },
+
+
   render: function() {
     return (
       <div className="myModalSignIn">
@@ -90,10 +103,10 @@ var ModalSignIn = React.createClass({
           
           <form>
 	          <SigninSignOut />
-	          <SigninSignOutButtons />
+	          <SigninButton />
 	      </form>
 
-	          
+	       <RegisterButton onButtonClick={this.callModalRegister}/>  
 	      <FindMyFacilityButton />
 	      <DoAssessmentButton />
           <button onClick={this.closeModal}>Use as Guest</button>
