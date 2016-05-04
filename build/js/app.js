@@ -21258,7 +21258,7 @@ var MainApplication = React.createClass({
 				React.createElement(
 					'div',
 					{ className: 'col-md-12' },
-					React.createElement(Modal, null)
+					React.createElement(ReactTabs, null)
 				)
 			)
 		);
@@ -21588,5 +21588,49 @@ module.exports = ModalSignIn;
 
 },{"./ModalRegister.jsx":188,"react":185,"react-dom":2,"react-modal":9}],190:[function(require,module,exports){
 var React = require('react');
+
+var ReactTabsApplication = React.createClass({
+	displayName: "ReactTabsApplication",
+
+	render: function () {
+		return React.createElement(
+			"div",
+			null,
+			React.createElement(
+				"ul",
+				{ className: "nav nav-tabs" },
+				React.createElement(
+					"li",
+					{ role: "presentation", className: "MyTab" },
+					React.createElement(
+						"a",
+						{ href: "#" },
+						"Assessment"
+					)
+				),
+				React.createElement(
+					"li",
+					{ role: "presentation", className: "MyTab" },
+					React.createElement(
+						"a",
+						{ href: "#" },
+						"My Diagnosis"
+					)
+				),
+				React.createElement(
+					"li",
+					{ role: "presentation", className: "MyTab" },
+					React.createElement(
+						"a",
+						{ href: "#" },
+						"Find My Facility"
+					)
+				)
+			)
+		);
+	}
+});
+
+module.exports = ReactTabsApplication;
 
 },{"react":185}]},{},[186]);

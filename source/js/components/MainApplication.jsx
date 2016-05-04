@@ -9,7 +9,7 @@ var MainApplication = React.createClass({
 		<div className="container">
 			<div className="row">
 				<div className='col-md-12'>
-					<Modal />
+					<ReactTabs />
 				</div>
 			</div>
 		</div>
