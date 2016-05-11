@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width">
 <title>My mini Triage.</title>
 
 <script src="https://fb.me/react-15.0.1.min.js"></script>
@@ -23,25 +24,9 @@
 <body>
 <div class="container-fluid">
 
-	<nav class="navbar navbar-default top">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="#">
-	        <img class="logo" alt="Brand" src="../images/logo.jpg"> 
-	      </a>
-
-	     <div class="navbar-right text-links">
-		     <div class="navbar-text"> <a href="#" class="navbar-link">Home</a></div> 
-
-		     <div class="navbar-text"> <a href="#" class="navbar-link">About</a></div> 
-
-		     <div class="navbar-text"> <a href="#" class="navbar-link">Resources</a></div>
-
-		     <div class="navbar-text"> <a href="#" class="navbar-link">Contact me</a></div> 
-		    </div>
-		 </div>
-	  </div>
-	</nav>
+	<div data-react-navbar>
+			Loading Component.. 
+	</div>
 
 	<div data-react-application>
 
@@ -53,6 +38,9 @@
 </div>
 
 <script src="./js/app.js"></script>
+<script type="text/javascript">
+	$('.dropdown-toggle').dropdown()
+</script>
 
 </body>
 </html>

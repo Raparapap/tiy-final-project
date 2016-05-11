@@ -46,3 +46,41 @@
 			</div>	
 
 
+<Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
+    <Tab eventKey={1} title="Tab 1">Tab 1 content</Tab>
+    <Tab eventKey={2} title="Tab 2">Tab 2 content</Tab>
+    <Tab eventKey={3} title="Tab 3" disabled>Tab 3 content</Tab>
+  </Tabs>
+
+
+
+
+  <nav class="navbar navbar-default top">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        <img class="logo" alt="Brand" src="../images/logo.jpg"> 
+	      </a>
+
+	     <div class="navbar-right text-links">
+		     <div class="navbar-text"> <a href="#" class="navbar-link">Home</a></div> 
+
+		     <div class="navbar-text"> <a href="#" class="navbar-link">About</a></div> 
+
+		     <div class="navbar-text"> <a href="#" class="navbar-link">Resources</a></div>
+
+		     <div class="navbar-text"> <a href="#" class="navbar-link">Contact me</a></div> 
+		    </div>
+		 </div>
+	  </div>
+	</nav>
+
+	<div>
+		<Tabs defaultActiveKey={1} animation={false} id="myTabs" generateChildId>
+	        <Tab eventKey={1} id="assessmentTab" title="Assessment Form">
+	        	<AssessmentForm />
+	        </Tab>
+	        <Tab eventKey={2} id="myDiagnosisTab" title="My Diagnosis">Tab 2 content</Tab>
+	        <Tab eventKey={3} id="findYourFacilityTab" title="Find your Facility">Tab 3 content</Tab>
+      	</Tabs>
+      </div>
