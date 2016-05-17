@@ -1,5 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var ReactBootstrap = require('react-bootstrap');
 var Modal = require('./ModalSignIn.jsx');
 var ReactTabs = require('./ReactTabs.jsx');
 
